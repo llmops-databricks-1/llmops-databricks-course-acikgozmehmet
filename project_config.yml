@@ -2,8 +2,8 @@
 
 # Development environment
 dev:
-  catalog: llmops_dev
-  schema: arxiv
+  catalog: mlops_dev
+  schema: acikgozm
   volume: arxiv_files
   llm_endpoint: databricks-llama-4-maverick
   embedding_endpoint: databricks-gte-large-en

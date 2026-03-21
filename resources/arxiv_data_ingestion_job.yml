@@ -1,9 +1,10 @@
 resources:
   jobs:
-    hello_world_job:
-      name: hello-world
+    arxiv_data_ingestion_job:
+      name: arxiv_data_ingestion
       tags:
-        project_name: "llmops-databricks-course-acikgozmehmet"
+        project_name: "arxiv-curator"
+        # project_name: "llmops-databricks-course-acikgozmehmet"
 
       environments:
         - environment_key: default
@@ -13,10 +14,10 @@ resources:
               - ../dist/*.whl
 
       tasks:
-        - task_key: hello_world
+        - task_key: arxiv_data_ingestion
           environment_key: default
           notebook_task:
-            notebook_path: ../notebooks/hello_world.py
+            notebook_path: ../notebooks/1.3a_arxiv_data_ingestion.py
             base_parameters:
               env: ${bundle.target}
               git_sha: "${var.git_sha}"
