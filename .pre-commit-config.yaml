@@ -1,4 +1,5 @@
-exclude: ^tests/resources/
+# exclude: ^(tests/resources/notebooks)
+exclude: '^(notebooks|scripts|tests)/.*'
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
