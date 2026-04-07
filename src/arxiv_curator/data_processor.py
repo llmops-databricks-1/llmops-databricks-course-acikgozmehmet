@@ -125,7 +125,7 @@ class DataProcessor:
                         "volume_path": f"{self.pdf_dir}/{paper_id}.pdf",
                     }
                 )
-                break
+                # break
             except Exception:
                 logger.warning(f"Paper {paper_id} was not successfully processed.")
             # Avoid hitting API rate limits
