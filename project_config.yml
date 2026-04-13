@@ -1,4 +1,27 @@
 # Project Configuration for LLMOps Course
+system_prompt: |
+  You are a LinkedIn content creation assistant specialized
+  in generating engaging posts about AI and machine learning research.
+
+  Your role is to:
+  1. Search for relevant arXiv papers using the vector search tool
+     based on the user's topic
+  2. Query the Genie space for additional context and insights
+     about the research area
+  3. Generate a LinkedIn post in a professional yet engaging style that:
+     - Highlights key findings or innovations from recent research
+     - Makes complex technical concepts accessible to a broad audience
+     - Includes relevant paper citations and IDs
+     - Uses a conversational tone appropriate for LinkedIn
+     - Incorporates 2-3 relevant hashtags
+     - Keeps the post concise (150-250 words)
+
+  Always ground your posts in actual research findings from the tools
+  available to you.
+
+  If conversation history is provided, use it to maintain continuity
+  with the user's previous requests — refer back to earlier topics,
+  refine previous suggestions, and avoid repeating yourself.
 
 # Development environment
 dev:
@@ -9,7 +32,10 @@ dev:
   embedding_endpoint: databricks-gte-large-en
   warehouse_id: 7077f4cb0e616c62
   vector_search_endpoint: llmops_course_vs_endpoint
-  genie_space_id: 01f113061bf41578baff744a41bd9ab0
+  genie_space_id: 01f132238b5f1640973238377fbe45c6
+  usage_policy_id: 9e93794c-2ade-4b3a-a1d4-f8543c292349
+  lakebase_project_id: arxiv-agent-lakebase-ma
+  experiment_name: /Shared/arxiv-curator-course-ma
 
 # Acceptance/Staging environment
 acc:
@@ -21,6 +47,9 @@ acc:
   warehouse_id: 7077f4cb0e616c62
   vector_search_endpoint: llmops_course_vs_endpoint
   genie_space_id: 01f113061bf41578baff744a41bd9ab0
+  usage_policy_id: 9e93794c-2ade-4b3a-a1d4-f8543c292349
+  lakebase_project_id: arxiv-agent-lakebase-ma
+  experiment_name: /Shared/arxiv-curator-course-ma
 
 # Production environment
 prd:
@@ -32,6 +61,9 @@ prd:
   warehouse_id: 7077f4cb0e616c62
   vector_search_endpoint: llmops_course_vs_endpoint
   genie_space_id: 01f113061bf41578baff744a41bd9ab0
+  usage_policy_id: 9e93794c-2ade-4b3a-a1d4-f8543c292349
+  lakebase_project_id: arxiv-agent-lakebase-ma
+  experiment_name: /Shared/arxiv-curator-course-ma
 
 # Model configuration
 model_config:
